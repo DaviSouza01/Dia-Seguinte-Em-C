@@ -116,7 +116,7 @@ int main(void){
 
     int dia, mes, ano, rep=0, teste;
 
-    printf("\n\nEsse programa mostra o dia seguinte da data digitada!\n\n");
+    printf("\nEsse programa mostra o dia seguinte da data digitada!\n\n");
     system("pause");
     system("cls");
 
@@ -125,19 +125,19 @@ int main(void){
 
     if(mes>=10 && dia>=10){
 	        
-		printf("\n\n\A data seguinte será: %d/%d/%d\n\n", dia,mes,ano);
+		printf("\n\nA data seguinte será: %d/%d/%d\n\n", dia,mes,ano);
 			
 	}else if(mes<10 && dia<10){
 
-        printf("\n\n\A data seguinte será: 0%d/0%d/%d\n\n", dia,mes,ano);
+        printf("\n\nA data seguinte será: 0%d/0%d/%d\n\n", dia,mes,ano);
 
 	}else if(mes<10 && dia>10){
 		
-		printf("\n\n\A data seguinte será: %d/0%d/%d\n\n", dia,mes,ano);
+		printf("\n\nA data seguinte será: %d/0%d/%d\n\n", dia,mes,ano);
 
     }else if(mes>10 && dia<10){
 
-        printf("\n\n\A data seguinte será: 0%d/%d/%d\n\n", dia,mes,ano);
+        printf("\n\nA data seguinte será: 0%d/%d/%d\n\n", dia,mes,ano);
 
 	}
 	
