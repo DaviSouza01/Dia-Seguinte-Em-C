@@ -1,2 +1,2 @@
 # Dia-Seguinte-Em-C
-Neste código, criei uma lógica para descobrir o dia seguinte de uma data informada pelo usuário, em linguagem C.
+Neste código em linguagem C, criei uma lógica para descobrir o dia seguinte de uma data informada pelo usuário.
