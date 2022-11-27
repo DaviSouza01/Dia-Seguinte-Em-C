@@ -1,0 +1,146 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+
+void data(int *dia, int *mes, int *ano){
+	int teste,rep=0;
+	do{
+    		printf("\n\nInforme o mês: \n\n");
+    		teste = scanf("%d", &*mes);
+    		getchar();
+    		system("cls");
+		}while(teste==0);
+    
+	if(*mes<1 || *mes>12){
+        while(rep==0){
+			do{
+				printf("\n\nMês inválido! Por favor, digite novamente o mês: \n\n");
+            	teste = scanf("%d", &*mes);
+            	getchar();
+           		system("cls");
+			}while(teste==0);	
+			
+            	if(*mes>=1 && *mes<=12){
+            		rep++;
+				}	
+            }
+	}rep=0;
+		
+	do{
+		printf("\n\nInforme o dia: \n\n");
+    	teste = scanf("%d", &*dia);
+    	getchar();
+   	 	system("cls");	
+	}while(teste==0);	
+    
+    
+	if(*dia>30 || *dia<1){
+        	while(rep==0){
+			do{
+				printf("\n\nDia inválido! Por favor, digite novamente o dia: \n\n");
+            	teste = scanf("%d", &*dia);
+            	getchar();
+            	system("cls");	
+			}while(teste==0);
+            	
+            	if(*dia>=1 && *dia<=30){
+            		rep++;
+				}	
+            }
+	}rep=0;
+
+    if(*mes==2){
+        if(*dia>28){
+            while(rep==0){
+
+          	do{
+				printf("\n\nDia inválido! Por favor, digite novamente o dia: \n\n");
+            	teste = scanf("%d", &*dia);
+            	getchar();
+            	system("cls");	
+			}while(teste==0);
+            	
+            	if(*dia<=28){
+            		rep++;
+				}	
+            }
+            
+        }
+    }rep=0;
+		
+	do{
+		printf("\n\nInforme o ano\n\n");
+    	teste = scanf("%d", &*ano);
+    	getchar();
+    	system("cls");
+	}while(teste==0);
+
+    if(*ano<0){
+        	while(rep==0){
+			do{
+				printf("\n\nAno inválido! Por favor, digite novamente o ano: \n\n");
+            	teste = scanf("%d", &*ano);
+            	getchar();
+            	system("cls");
+			}while(teste==0);
+            	
+            	if(*ano>=0){
+            		rep++;
+				}	
+            }
+	}rep=0;
+
+	if(*dia==28 && *mes==2){
+		*dia = 1;
+		++*mes;
+	}else if(*dia<30){
+    	++*dia;
+	}else if(*dia==30){
+
+    	if(*mes==12){
+
+        	*mes=1;
+        	*dia=1;
+        	++*ano;
+		}else if(*mes<12){
+
+         *dia=1;
+         ++*mes;
+    	}
+	}
+}
+
+int main(void){
+
+    setlocale(LC_ALL,"Portuguese");
+
+    int dia, mes, ano, rep=0, teste;
+
+    printf("\n\nEsse programa mostra o dia seguinte da data digitada!\n\n");
+    system("pause");
+    system("cls");
+
+    data(&dia,&mes,&ano);
+
+
+    if(mes>=10 && dia>=10){
+	        
+		printf("\n\n\A data seguinte será: %d/%d/%d\n\n", dia,mes,ano);
+			
+	}else if(mes<10 && dia<10){
+
+        printf("\n\n\A data seguinte será: 0%d/0%d/%d\n\n", dia,mes,ano);
+
+	}else if(mes<10 && dia>10){
+		
+		printf("\n\n\A data seguinte será: %d/0%d/%d\n\n", dia,mes,ano);
+
+    }else if(mes>10 && dia<10){
+
+        printf("\n\n\A data seguinte será: 0%d/%d/%d\n\n", dia,mes,ano);
+
+	}
+	
+	system("pause");
+	
+}
