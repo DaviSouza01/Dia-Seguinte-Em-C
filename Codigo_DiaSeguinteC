@@ -3,7 +3,7 @@
 #include<locale.h>
 
 void data(int *dia, int *mes, int *ano){
-	int teste,rep=0;
+int teste,rep=0;
 	do{
     		printf("\n\nInforme o mês: \n\n");
     		teste = scanf("%d", &*mes);
@@ -11,14 +11,14 @@ void data(int *dia, int *mes, int *ano){
     		system("cls");
 		}while(teste==0);
     
-	if(*mes<1 || *mes>12){
-        while(rep==0){
-			do{
-				printf("\n\nMês inválido! Por favor, digite novamente o mês: \n\n");
-            	teste = scanf("%d", &*mes);
-            	getchar();
-           		system("cls");
-			}while(teste==0);	
+		if(*mes<1 || *mes>12){
+       	 		while(rep==0){
+				do{
+	printf("\n\nMês inválido! Por favor, digite novamente o mês: \n\n");
+        teste = scanf("%d", &*mes);
+        getchar();
+     	system("cls");
+	}while(teste==0);	
 			
             	if(*mes>=1 && *mes<=12){
             		rep++;
